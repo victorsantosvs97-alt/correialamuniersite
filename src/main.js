@@ -4,7 +4,7 @@
   // Endereço do serviço de formulário (ex.: https://formspree.io/f/xxxxxxx).
   // Vazio + site hospedado no Netlify: usa os Formulários do Netlify.
   // Vazio fora do Netlify: abre o e-mail do visitante já preenchido.
-  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/atendimento@correialamunier.com';
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/correia@correialamunier.com';
   var EMAIL = 'atendimento@correialamunier.com';
   var lang = document.documentElement.lang === 'en' ? 'en' : 'pt';
   var T = {

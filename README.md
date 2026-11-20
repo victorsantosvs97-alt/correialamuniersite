@@ -19,7 +19,7 @@ Código-fonte de **correialamunier.com** (português e inglês). Hospedagem: Git
 | Imagens da assinatura de e-mail (não remover) | `assinatura/` |
 
 ## Formulário de contato
-Enviado pelo FormSubmit para atendimento@correialamunier.com (`FORM_ENDPOINT` em `src/main.js`).
+Enviado pelo FormSubmit para correia@correialamunier.com (`FORM_ENDPOINT` em `src/main.js`).
 
 ## Domínio
 Domínio registrado na Hostinger; DNS gerenciado na zona do Netlify (inclui os registros do
