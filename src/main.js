@@ -100,7 +100,8 @@
     if (FORM_ENDPOINT) {
       say(T.sending);
       fetch(FORM_ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
-        .then(function (r) { if (!r.ok) throw new Error(); form.reset(); say(T.ok, 'ok'); })
+        .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+        .then(function (j) { if (!j || String(j.success) !== 'true') throw new Error(); form.reset(); say(T.ok, 'ok'); })
         .catch(function () { say(T.err, 'err'); });
       return;
     }
