@@ -576,7 +576,7 @@ def post_card(lang, a, feature=False):
     cls = 'post post-feature reveal' if feature else 'post reveal'
     return (f'<a class="{cls}" href="{art_href(lang, a)}">{img}<div class="post-txt">'
             f'<p class="post-meta"><span class="post-tag">{tag}</span><span>{d}</span></p>'
-            f'<h3>{a["titulo"]}</h3><p class="post-sum">{a["resumo"]}</p><span class="more">{read}</span></div></a>')
+            f'<h2>{a["titulo"]}</h2><p class="post-sum">{a["resumo"]}</p><span class="more">{read}</span></div></a>')
 
 
 def page_blog(lang):
