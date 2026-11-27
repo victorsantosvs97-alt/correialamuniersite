@@ -11,8 +11,8 @@
 /* Layout: páginas claras em marfim, muito respiro, tipografia serifada grande (estilo Apple, tom jurídico);
    cartões arredondados com fotos; faixas azul-escuras pontuais; dourado só como acento. */
 :root {
-  --ivory: #f6f6f6;
-  --white: #ffffff;
+  --ivory: #faf8f4;
+  --white: #fffefc;
   --sand: #f3ede3;
   --sand-2: #e8dfcf;
   --ink: #1d2230;
@@ -25,7 +25,7 @@
   --muted: #5c6271;
   --muted-on-dark: #c9cdd7;
   --line: rgba(29, 34, 48, 0.12);
-  --display: 'Source Sans 3', -apple-system, 'Segoe UI', Arial, sans-serif;
+  --display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --sans: 'Source Sans 3', -apple-system, 'Segoe UI', Arial, sans-serif;
   --r-lg: 28px;
   --r-md: 20px;
@@ -42,7 +42,7 @@ body {
   font-family: var(--sans); font-size: 18px; line-height: 1.6;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: rgba(246, 246, 246, 0.85); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: rgba(250, 248, 244, 0.85); }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
@@ -97,7 +97,7 @@ p { margin: 0; text-wrap: pretty; }
 /* ---------- Cabeçalho translúcido ---------- */
 .site-header {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
-  background: rgba(246, 246, 246, 0.78); backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px);
+  background: rgba(250, 248, 244, 0.78); backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px);
   border-bottom: 1px solid var(--line);
 }
 .site-header .wrap { display: flex; align-items: center; gap: 20px; min-height: 68px; }
@@ -118,7 +118,7 @@ p { margin: 0; text-wrap: pretty; }
   .nav {
     display: none; position: absolute; left: 0; right: 0; top: 100%;
     flex-direction: column; align-items: stretch; gap: 0;
-    background: rgba(246, 246, 246, .98); border-bottom: 1px solid var(--line);
+    background: rgba(250, 248, 244, .98); border-bottom: 1px solid var(--line);
     padding: 8px var(--gutter-r) 22px var(--gutter);
   }
   .nav.open { display: flex; }
@@ -307,7 +307,7 @@ p { margin: 0; text-wrap: pretty; }
 
 /* ---------- Chamada final ---------- */
 .cta { text-align: center; }
-.cta .box { border-radius: var(--r-lg); padding: clamp(56px, 8vw, 110px) clamp(24px, 5vw, 64px); background: radial-gradient(120% 120% at 50% 0%, #ffffff 0%, var(--sand) 55%, var(--sand-2) 100%); display: grid; gap: 22px; justify-items: center; }
+.cta .box { border-radius: var(--r-lg); padding: clamp(56px, 8vw, 110px) clamp(24px, 5vw, 64px); background: radial-gradient(120% 120% at 50% 0%, #fffdf8 0%, var(--sand) 55%, var(--sand-2) 100%); display: grid; gap: 22px; justify-items: center; }
 .cta .lead { text-align: center; }
 
 /* ---------- Páginas internas ---------- */
@@ -445,10 +445,7 @@ textarea { min-height: 150px; resize: vertical; }
 .art-src a { color: var(--gold-ink); }
 .back { font-size: .95rem; font-weight: 600; color: var(--gold-ink); text-decoration: none; }
 
-/* ---------- Ajustes Impeccable (nov/2026) ---------- */
-/* Titulos na fonte da marca (Source Sans), sem italico; o destaque fica so na cor dourada. */
-.display, .title, .title-sm, .tile h2, .statement, .card h3, .bento h3, .person h3, .practice h3, .prose h2, .values h3, .post h2, .faq summary, .office .city, .ig-handle { font-weight: 600; letter-spacing: -0.015em; }
-.display em, .title em, .title-sm em, h1 em, h2 em, h3 em, .statement em { font-style: normal; }
+/* ---------- Ajustes de acessibilidade (nov/2026) ---------- */
 /* Area de toque minima nos links do rodape e de idioma (celular). */
 .site-footer a, .lang a { display: inline-block; padding-block: 6px; }
 .nav .lang a, .lang a { opacity: 1; }
